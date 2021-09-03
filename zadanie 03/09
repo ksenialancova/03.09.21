@@ -1,0 +1,97 @@
+Задание №1.
+
+#include<iostream>
+using namespace std;
+int main() {
+	int a, b, c;//колличество товара
+	float p1 = 30, p2 = 60, p3 = 50;//цена товара
+	float SUM;//общая сумма
+	cin  >>a >> b >> c;//введите коэффициенты
+	SUM = a * p1 + b * p2 + c * p3;
+	cout << SUM << endl;
+
+	return 0;
+}
+
+Задание №2.
+
+#include<iostream>
+using namespace std;
+int main() {
+int a, b, c;
+cin >> a;
+b = a + 24;
+c = (a + b) * 2;
+cout << "a=" << a <<" "<< "b=" << b <<" "<< "c=" << c << endl;
+system("pause");
+return 0;
+}
+
+Задание №3.
+
+#include<iostream>
+using namespace std;
+int main() {
+int a,b;
+cin >> a;//введите четырехзначное число
+while (a > 0) {
+int b = a % 10;
+a = a / 10;
+cout << b;
+}
+system("pause");
+return 0;
+}
+
+Задание №4.
+
+#include <math.h>
+#include<iostream>
+
+using namespace std;
+int main() {
+int a;//число для возведения в куб
+int b;//значение для цикла
+cin >> a;
+cout << pow(a, 3) << endl;
+int i=0;
+while(true){
+    i++;
+cout << "Press 0 to continue, 1 to finish" << endl;
+cin >> b;
+if(b==0){
+cin >> a;
+cout << pow(a, 3) << endl;
+}
+if(b==1){
+cout << "END"<< endl;
+break;
+}
+}
+system("pause");
+return 0;
+}
+
+Задание №5
+
+#include<iostream>
+
+using namespace std;
+int main() {
+int a,b,c,sum=0;
+cout<<"Введите начало диапазона :";
+cin>>a;
+cout<<"Введите конец диапазона :";
+cin>>b; 
+for (int i = a;i != b + 1;i++){
+    c=0;
+    for (int j = 2; j < i; j++){
+       if (i % j == 0){
+         c++;}
+}
+       if (c == 0){
+         sum = sum + i;}
+}
+cout << endl << "Сумма диапозона: " << sum;
+return 0; 
+}
